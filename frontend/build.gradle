@@ -5,10 +5,12 @@ plugins {
 }
 node {
 //    npmInstallCommand = 'ci'
+	download = true
+	version = '14.17.0'
 }
-//alo
-//clean {
-//    delete 'node_modules'
-//}
+
+clean {
+    delete 'node_modules'
+}
 
 assemble.dependsOn('check', 'npm_run_build')
